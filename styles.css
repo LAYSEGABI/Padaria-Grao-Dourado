@@ -1,0 +1,76 @@
+/* Importe dos estilos */
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/sobre-nos.css");
+@import url("styles/especialidades.css");
+@import url("styles/numeros.css");
+@import url("styles/contato.css");
+@import url("styles/footer.css");
+
+/* Importe da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oleo+Script+Swash+Caps&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco-padrao: white;
+    --marron-back: #0f0702;
+    --fonte-titulo: 'Oleo Script Swash Caps', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--branco-padrao);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco-padrao);
+}
+
+/* Scrollbar personalizada */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--branco-padrao);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--marron-back);
+    border-radius: 5px;
+}
+
+/* Animaçoes de entrada e saida de conteudo */
+
+[data-anima] {
+    opacity: 0;
+    transition: .8s;
+}
+
+[data-anima="esquerda"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anima="direita"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anima="centro"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
